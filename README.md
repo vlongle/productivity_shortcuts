@@ -80,8 +80,8 @@ Option + up/down arrows
 https://stackoverflow.com/questions/44018175/hotkey-to-move-a-tab-from-one-of-two-split-editors-to-another
 Move files from one split window to another
 - workbench.action.moveEditorToNextGroup View: Move Editor into Next Group:
-  remapped to Tab + ->
-- workbench.action.moveEditorToPreviousGroup View: Move Editor into Previous Group: remapped to Tab + <-
+  remapped to -> + ->
+- workbench.action.moveEditorToPreviousGroup View: Move Editor into Previous Group: remapped to <- + <-
 
 
 
@@ -115,7 +115,49 @@ Move to next/back brackets
 
 Shift + [, Shift + ]
 
+Search the current word under cursor
+*
+
+Repeat last command (work sometimes!)
+.
+
+Store macros to register
+qa (store to register a)
+then type some command
+q: finish recording macro
+@a: repeat last op from register
+
 _Primageon_
 https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw
 
+## Spectacle
+Window manager. 
+It shows all the shortcuts in the app. 
+Move left/right, move top left/right, move bottom left/right, move center, move full-screen
 
+## Mac Spaces & Mission Control
+
+Ctrl + Up: see the mission control to create new workspaces
+Ctr + <-/->: Moving between spaces
+Ctr + Down: see all instances of this app (e.g. multiple windows of Chrome)
+
+## Iterm
+Command + tab: open new tab
+Command + number or Command + ->/<-: move between tabs
+(who needs tmux!!)
+Command + d: open split pane horizontal
+Shift + Command + d: split pane vertical
+ctrl + d: close this iterm pane
+
+## Cool stuff to configure
+
+__VSCodes__
+1. Make vscode transparent by installing vibrancy. Can see through the background
+2. Use bearded or spotify or github themes 
+3. Use the (anime) background extension 
+4. (Of course) use vim extension (with vimrc linked! Can config this in user settings)
+5. Use github copilot (It's insanely smart. Holy smoke!)
+
+__Iterms__
+1. Configure iterms to either be transparent or use background image. (Preferences>profile>(select the correct profile)>windows)
+2. Use the ubuntu colors! (Preferences>profile>colors)
