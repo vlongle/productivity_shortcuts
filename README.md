@@ -17,6 +17,15 @@ Cmd + Space
 Open new iterms at this folder
 Shift + Cmd + Option + N
 
+Undo
+Command + Z
+
+Redo
+Command + Shift + Z
+
+In finder, do
+Shift + Cmd + G: to be able to navigate to hidden folders
+
 ## VSCode
 
 `Open command Palette`
@@ -46,6 +55,9 @@ Cmd + Shift + F: within all files (in this project)
 
 `File: New Untitled File`
 Cmd + n
+
+`Delete file`
+"Cmd + Delete" when clicking on the file from the explorer (Cmd + b)
 
 Move between panes
 Cmd + 1, Cmd + 2
@@ -89,6 +101,35 @@ Move files from one split window to another
 Move to end of line
 $
 
+Move to the end of line and enter insert
+Shift + a
+
+Move to the beginning of line
+0
+
+Move to the beginning of line and enter insert
+Shift + i
+
+
+New line below and insert
+o
+
+New line above and insert
+Shift + o
+
+All the yank and delete stuff
+y, d
+yy: yank line
+dd: delete line
+p: paste
+yw: yank word
+
+Undo
+u
+
+Redo
+Ctrl + r
+
 Go to definition (Vim)
 gd
 
@@ -124,11 +165,62 @@ Repeat last command (work sometimes!)
 Store macros to register
 qa (store to register a)
 then type some command
-q: finish recording macro
-@a: repeat last op from register
+q finish recording macro
+@a repeat last op from register
+
+:sp or :split for horizontal pane split
+:vs or :vsplit for vertical split
+:q or Ctrl+w C to close the pane
+Ctrl+w s: horizontal split
+Ctrl+w v: vertical split
+
+When searching 
+n: to next
+shift + n : to go back
+
+When doing auto-completion
+shift + n: go to the next suggestion
+shift + p: previous suggestion
+
+Insertion
+i: insert before cursor
+a: insert after cursor
+s: delete word and enter insert
+x: delete word
+Shift + i: insert beginning of line
+Shift + a: insert end of line
+
+__Sourcing files__
+:so nameOfTheFile in vim to source a .vimrc or something.vim file
+or :so % to source the current file 
+
+__Installing color themes__
+Download a something.vim from github. Then put that into ~/.vim/colors. Then, we can use ":colorscheme something" to set the color.
 
 _Primageon_
 https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw
+
+Configure .vimrc in the root directory
+
+__More navigation__: 
+https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen
+
+f + character: jump on that character within this line
+t + character: jump to before character within this line
+e: get to the end of a word
+%: jump to matching brackets like (, ) or {, }
+__tip__: deleting args of function?
+Use d t then ).
+
+Ctrl + a: increment a number under cursor
+Ctrl + x: decrement a number under cursor
+
+Shift  + ~ : toggle capitalization of word
+
+Capitalize the whole word:
+Shift + v: to visualize highlight the word
+Then
+Shift + U: to capitalize the word
 
 ## Spectacle
 Window manager. 
