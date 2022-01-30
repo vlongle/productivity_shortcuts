@@ -44,6 +44,10 @@ app. The code is the last part of unicode. For example, `g` is 0x67 and `c` is 0
 ![](imgs/keycodes.png)
 
 ### Some random cool terminal apps
+
+![](imgs/weather.png)
+![](imgs/nyancat_cmatrix.png)
+
 - neofetch, screenfetch. Installed by brew.
 - go-nyancat [https://github.com/NARKOZ/go-nyancat](https://github.com/NARKOZ/go-nyancat). Then use `alias` in `zhsrc` to map `nyancat` to `cd ~/Downloads/go-nyancat && ./go-nyancat`.
 - alias weather='curl http://wttr.in/'.
