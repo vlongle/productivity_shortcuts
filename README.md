@@ -1,4 +1,4 @@
-# Productivity shortcuts
+# Productivity shortcuts & Settings
 
 ## Iterm2
 
