@@ -15,7 +15,11 @@
 
 ### Hotkey Window
 
+![](imgs/hotkey_window.png)
+
+
 To configure ITerm 2 hot key window.
+
 1. Open iTerm2
 2. Go to `preference > Keys > Hotkey`
 3. "Create a Dedicated HotKey Window"
@@ -24,11 +28,32 @@ To configure ITerm 2 hot key window.
 
 ### Cool things to configure
 
+![](imgs/iterm.png)
+
 1. Configure iterms to either be transparent or use background image. (Preferences>profile>(select the correct profile)>windows)
 2. Use the ubuntu colors! (Preferences>profile>colors)
+3. Use `ZSH_THEME="powerlevel10k/powerlevel10k"` in the `.zshrc` file. May have to install `oh-my-zsh`.
+
+### Remap keys
+
+[https://apple.stackexchange.com/questions/89981/remapping-keys-in-iterm2](https://apple.stackexchange.com/questions/89981/remapping-keys-in-iterm2)
+In iterm2, go to `Preferences/keys/keybindings` then we can add custom key binding.
+For example, I want to remap `cmd + /` to `gc`. I'll do `cmd + /` in the keyboard shortcut, and select
+`send hex code`. To find out the hex code for `gc`, I use the app __Key Codes__ in Mac and type `gc` in the
+app. The code is the last part of unicode. For example, `g` is 0x67 and `c` is 0x63.
+![](imgs/keycodes.png)
+
+### Some random cool terminal apps
+- neofetch, screenfetch. Installed by brew.
+- go-nyancat [https://github.com/NARKOZ/go-nyancat](https://github.com/NARKOZ/go-nyancat). Then use `alias` in `zhsrc` to map `nyancat` to `cd ~/Downloads/go-nyancat && ./go-nyancat`.
+- alias weather='curl http://wttr.in/'.
+- `w3m google.com` to surf google from the terminal.
+- cmatrix [https://github.com/abishekvashok/cmatrix](https://github.com/abishekvashok/cmatrix).
 
 ## Chrome
+
 ### Shortcuts
+
 - `Cmd + t`: open new tab
 - `Cmd + n`: new window
 - `Cmd + shift + n`: new igconito window
@@ -39,6 +64,9 @@ To configure ITerm 2 hot key window.
 - `cmd+y`: history
 
 ### Extensions
+
+![](imgs/ubuntu_chrome.png)
+
 - Use Ubuntu theme
 - Use [https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en](ShortKeys) extension to build custom
 
@@ -77,6 +105,8 @@ It shows all the shortcuts in the app.
 Move left/right, move top left/right, move bottom left/right, move center, move full-screen
 
 ### Mac Spaces & Mission Control
+
+![](imgs/mac_spaces_mission_control.png)
 
 - Ctrl + Up: see the mission control to create new workspaces
 - Ctr + <-/->: Moving between spaces
@@ -154,7 +184,12 @@ Option + up/down arrows
   remapped to -> + ->
     - workbench.action.moveEditorToPreviousGroup View: Move Editor into Previous Group: remapped to <- + <-
 
+- highlight code and then do `Cmd + /` to comment or uncomment code (generally works for sublime and
+other editors than Vscode as well!)
+
 ### Configure
+
+![](vscode_vibrancy.png)
 
 1. Make vscode transparent by installing vibrancy. Can see through the background
 2. Use bearded or spotify or github themes 
@@ -295,6 +330,11 @@ Store macros to register
 
 Use Vundle [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
 `:so %` and `:PluginInstall`. Then the package is ready to use! We can even edit the package in `~/.vim/bundle/SpecificPackagename`.
+
+
+__Tcomment_vim__: In visual mode, type `gc` to comment/uncomment code block. But most other editors
+use `cmd + /` to comment code so I map `cmd + /` to `gc` using the iterm2 trick. (see above in iterm2 remap
+trick). Note that Vim also doesn't support the cmd key. 
 
 ### Install color theme
 Download a something.vim from github. Then put that into ~/.vim/colors. Then, we can use ":colorscheme something" to set the color.
