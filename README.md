@@ -27,6 +27,26 @@ To configure ITerm 2 hot key window.
 1. Configure iterms to either be transparent or use background image. (Preferences>profile>(select the correct profile)>windows)
 2. Use the ubuntu colors! (Preferences>profile>colors)
 
+## Chrome
+### Shortcuts
+- `Cmd + t`: open new tab
+- `Cmd + n`: new window
+- `Cmd + shift + n`: new igconito window
+- `Cmd + number`: move between tabs
+- [https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts]()
+    - ctr + tab: jump to right tab
+    - Ctrl + shift + tab: jump to left tab
+- `cmd+y`: history
+
+### Extensions
+- Use Ubuntu theme
+- Use [https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en](ShortKeys) extension to build custom
+shortcuts.
+    - `shift+left`, `shift+right` to go back and go forward (in url)
+    - `command+left`, `command+right` to move between tabs.
+    - Note: there're some issues with command on a new tab: [https://github.com/mikecrittenden/shortkeys/issues/44](). The solution is
+    to use Chrome native shortcut UI via this extension. See bottom of this page [https://github.com/mikecrittenden/shortkeys/wiki/How-To-Use-Shortkeys](). Basically, need to go to [chrome://extensions/shortcuts]() and configure the shortcut there instead.
+
 ## Mac 
 
 ### Shortcuts
@@ -45,7 +65,7 @@ To configure ITerm 2 hot key window.
 
 - In finder, do
 `Shift + Cmd + G`: to be able to navigate to hidden folders
-
+- `Cmd + Tab` switch between apps.
 
 ### Spectacle
 
