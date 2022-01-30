@@ -33,7 +33,7 @@ To configure ITerm 2 hot key window.
 - `Cmd + n`: new window
 - `Cmd + shift + n`: new igconito window
 - `Cmd + number`: move between tabs
-- [https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts]()
+- [https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts](https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts)
     - ctr + tab: jump to right tab
     - Ctrl + shift + tab: jump to left tab
 - `cmd+y`: history
@@ -41,11 +41,14 @@ To configure ITerm 2 hot key window.
 ### Extensions
 - Use Ubuntu theme
 - Use [https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en](ShortKeys) extension to build custom
+
 shortcuts.
     - `shift+left`, `shift+right` to go back and go forward (in url)
     - `command+left`, `command+right` to move between tabs.
-    - Note: there're some issues with command on a new tab: [https://github.com/mikecrittenden/shortkeys/issues/44](). The solution is
+    - Note: there're some issues with command on a new tab: [https://github.com/mikecrittenden/shortkeys/issues/44](https://github.com/mikecrittenden/shortkeys/issues/44). The solution is
     to use Chrome native shortcut UI via this extension. See bottom of this page [https://github.com/mikecrittenden/shortkeys/wiki/How-To-Use-Shortkeys](). Basically, need to go to [chrome://extensions/shortcuts]() and configure the shortcut there instead.
+    [chrome://extensions/configureCommands](chrome://extensions/configureCommands)
+
 
 ## Mac 
 
@@ -88,7 +91,7 @@ To change keyboard shortcuts. Open command palette and search for keyboard short
 
 Trick to find out what the command's name for a key binding. E.g. I don't know what the name of the command associated with `Cmd + W`. Go to keyboard shortcuts, search for tab and pick a random tab command that has no key binding. Then, try to add `Cmd + W` key binding to it. VSCode will warn that there are already existing commands and you can see what they are. Alternatively, put the command in bracket and search in keyboards i.e. search for `"cmd + w"`
 
-Useful reference: [https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/]()
+Useful reference: [https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/](https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/)
 
 - `Open command Palette`
 Cmd + Shift + P
@@ -128,7 +131,7 @@ Cmd + \
 - `Open new external monitor`
 Shift + Cmd + C
     - Change the default terminal in vscode to iterm
-[https://stackoverflow.com/questions/29957456/change-default-terminal-app-in-visual-studio-code-on-mac]()
+[https://stackoverflow.com/questions/29957456/change-default-terminal-app-in-visual-studio-code-on-mac](https://stackoverflow.com/questions/29957456/change-default-terminal-app-in-visual-studio-code-on-mac)
 
 
 - Jump tabs Within a pane
@@ -145,7 +148,7 @@ Shift + arrow keys
 - `Move lines up down`
 Option + up/down arrows
 
-- Move files from one split window to another ([https://stackoverflow.com/questions/44018175/hotkey-to-move-a-tab-from-one-of-two-split-editors-to-another]())
+- Move files from one split window to another ([https://stackoverflow.com/questions/44018175/hotkey-to-move-a-tab-from-one-of-two-split-editors-to-another](https://stackoverflow.com/questions/44018175/hotkey-to-move-a-tab-from-one-of-two-split-editors-to-another))
     - workbench.action.moveEditorToNextGroup View: Move Editor into Next Group:
   remapped to -> + ->
     - workbench.action.moveEditorToPreviousGroup View: Move Editor into Previous Group: remapped to <- + <-
@@ -289,7 +292,7 @@ Store macros to register
 
 ### Packages
 
-Use Vundle [https://github.com/VundleVim/Vundle.vim]() to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
+Use Vundle [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
 `:so %` and `:PluginInstall`. Then the package is ready to use! We can even edit the package in `~/.vim/bundle/SpecificPackagename`.
 
 ### Install color theme
@@ -297,10 +300,10 @@ Download a something.vim from github. Then put that into ~/.vim/colors. Then, we
 
 ### Primageon
 
-[https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw]()
+[https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw](https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw)
 The goat!!
 
-[https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen](): More navigation
+[https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen](https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen): More navigation
 
 ### Configure 
 
