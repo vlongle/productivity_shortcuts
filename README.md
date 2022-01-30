@@ -267,7 +267,10 @@ Store macros to register
 4. @a repeat last op from register
 
 
+### Packages
 
+Use Vundle [https://github.com/VundleVim/Vundle.vim]() to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
+`:so %` and `:PluginInstall`. Then the package is ready to use! We can even edit the package in `~/.vim/bundle/SpecificPackagename`.
 
 ### Install color theme
 Download a something.vim from github. Then put that into ~/.vim/colors. Then, we can use ":colorscheme something" to set the color.
