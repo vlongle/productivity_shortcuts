@@ -96,11 +96,8 @@ Useful reference: [https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/](ht
 - `Open command Palette`
 Cmd + Shift + P
 
-
-
 - `Go to File` (Search for files in this project)
 Cmd + p
-
 
 - Toggle the sidebar
 Cmd + b
@@ -112,7 +109,6 @@ Cmd + t
     - Cmd + f: within a file
     - Cmd + Shift + F: within all files (in this project)
 
-
 - `File: New Untitled File`
 Cmd + n
 
@@ -121,6 +117,8 @@ Cmd + n
 
 - Move between panes
 Cmd + 1, Cmd + 2
+    - Custom shortcuts: Cmd + left, Cmd + right (arrow key) to move between
+    windows (name of commands `view:focus left/right editor group`.
 
 - `Close window` (Delete Tab)
 Cmd + W
@@ -137,7 +135,10 @@ Shift + Cmd + C
 - Jump tabs Within a pane
     - Shift + Cmd + [
     - Shift + Cmd + ]
-    - Or with Ctrl + 1, Ctrl + 2
+    - Custom map now to shift+left, shift+right (name of commands `view: open previous/next editor`)
+- Resizing panes. I customized it to
+    - `Shift =` (i.e. + sign) to `increase current view size` (name of command).
+    - `shift -` (i.e. - sign) to `decrease current view size`.
 
 - `Move lines`
 Option + up or down
