@@ -12,6 +12,7 @@
 - `ctrl + d`: close this iterm pane
 - `Shift + arrow key`: move between panes 
 (I customized this by going to Preferences/profiles/panes)
+- `Cmd + K`: equivalent to `$ clear` in terminal
 
 ### Hotkey Window
 
@@ -25,6 +26,8 @@ To configure ITerm 2 hot key window.
 3. "Create a Dedicated HotKey Window"
 4. On the Hotkey, choose the shortcut by holding Ctrl and h. Then click ok to create
 5. `Ctrl + h` to open use hotkey window
+6. Set background image randomly. Download file from [https://github.com/jamsyoung/iterm2-random-background](https://github.com/jamsyoung/iterm2-random-background) to `~/Downloads`. Then go to iterm2 `Preferences/profiles/general` and 
+add the execution code `osascript ~/Downloads/iterm2-random-background.scpt` (I think `osa` means os Apple?) in "Send text at start".
 
 ### Cool things to configure
 
@@ -172,7 +175,7 @@ Shift + Cmd + C
     - Custom map now to shift+left, shift+right (name of commands `view: open previous/next editor`)
 - Resizing panes. I customized it to
     - `Shift =` (i.e. + sign) to `increase current view size` (name of command).
-    - `shift -` (i.e. - sign) to `decrease current view size`.
+    - `-` (i.e. - sign) to `decrease current view size`.
 
 - `Move lines`
 Option + up or down
@@ -235,9 +238,14 @@ Shift + o
     - yiw: yank (inner) word.
     - Similarly,
     - dw, diw, vw, viw (visual select word).
+        - __NOTE__: we can use `cw`, `cc` instead of `dw`, `dd` to delete
+        AND jump into insert mode
 
 - The difference between yw and yiw is that for yw you need to be at the
 beginning of the word. For yiw, you can be in a character inside a word.
+- Some cool thing to do with v,i,d,c. Say, I want to delete the args `x,y,z` of `def fun(x,y,z)`.
+I can go to somewhere within the bracket and do `di(` or `di)` to delete or `ci(` or `ci)` to delete
+and enter insert mode (so that I can type in other args e.g.).
 
 - Undo
 u
@@ -245,13 +253,13 @@ u
 - Redo
 Ctrl + r
 
-- Go to definition (Vim)
+- Go to definition (e.g. of a function, variable...)
 gd
 
-- Jump back (Vim)
+- Jump back to prev location ("old" for old)
 Ctrl + o
 
-- Jump forward (Vim)
+- Jump forward to next location
 Ctrl + i
 
 - Code folding
@@ -272,8 +280,9 @@ Shift + [, Shift + ]
 - Search the current word under cursor
 *
 
-- Repeat last command (work sometimes!)
+- Repeat last change in normal mode (work for stuff like dw)
 .
+- @: repeat last command entered with `:something`.
 
 - When searching 
     - n: to next
@@ -293,6 +302,7 @@ Shift + [, Shift + ]
 
 - f + character: jump on that character within this line
 - t + character: jump to before character within this line
+    - Use `;` to repeat the t and f jumps. `,` to go backward. [https://stackoverflow.com/questions/10340562/vim-repeat-find-next-character-x](https://stackoverflow.com/questions/10340562/vim-repeat-find-next-character-x)
 - e: get to the end of a word
 - %: jump to matching brackets like (, ) or {, }
 - __tip__: deleting args of function?
@@ -304,6 +314,10 @@ Shift + [, Shift + ]
 - Capitalize the whole word:
     - Shift + v: to visualize highlight the word
     - Then, Shift + U: to capitalize the word
+- Marking
+    - use `ma` to mark the location of the current line to register `a`.
+    - Then later use `'a` to go back to that location.
+    - Use capital letter (e.g. `mA`) to mark _across_ files!
 
 ### Commands
 
