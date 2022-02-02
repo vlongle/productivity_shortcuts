@@ -11,7 +11,7 @@
 - `Shift + Command + d`: split pane vertical
 - `ctrl + d`: close this iterm pane
 - `Shift + arrow key`: move between panes 
-(I customized this by going to Preferences/profiles/panes)
+(I customized this by going to Preferences/profiles/Keys and add shortcuts for `Previous Pane` and `Next Pane`)
 - `Cmd + K`: equivalent to `$ clear` in terminal
 
 ### Hotkey Window
@@ -233,6 +233,8 @@ Shift + o
     - y, d
     - yy: yank line
     - dd: delete line
+        - Shift-D (preferred) or Shift-$: delete the rest of
+        the line
     - p: paste
     - yw: yank word
     - yiw: yank (inner) word.
@@ -255,6 +257,11 @@ Ctrl + r
 
 - Go to definition (e.g. of a function, variable...)
 gd
+- Go to the file under cursor: gf (useful to look up `import` statements).
+Can use `ctrl+w gf` to open the file in a new tab or `ctrl+w f` to open in new split
+
+- next tab: gt
+- prev tab: gT
 
 - Jump back to prev location ("old" for old)
 Ctrl + o
@@ -262,10 +269,18 @@ Ctrl + o
 - Jump forward to next location
 Ctrl + i
 
+- Jump back to the prev files: ctrl + ^. Useful for toggling between
+two files that you're editting at once. (useful when first used with fzf to open
+the second file).
 - Code folding
     - zc: close
     - zo: open
     - za: toggle the the fold
+    - zr: reduce fold level (open)
+    - zm: increase fold level (close)
+    - zR: open all folds
+    - zM: close all folds
+
 
 
 - Go to the top
@@ -277,7 +292,7 @@ Shift + g
 - Move to next/back brackets
 Shift + [, Shift + ]
 
-- Search the current word under cursor
+- Search the current word under cursor. (jump to the next occurence)
 *
 
 - Repeat last change in normal mode (work for stuff like dw)
@@ -295,7 +310,7 @@ Shift + [, Shift + ]
 - Insertion
     - i: insert before cursor
     - a: insert after cursor
-    - s: delete word and enter insert
+    - s: delete word and enter insert mode
     - x: delete word
     - Shift + i: insert beginning of line
     - Shift + a: insert end of line
@@ -328,11 +343,18 @@ __Panes__
 - :q or Ctrl+w C to close the pane
 - Ctrl+w s: horizontal split
 - Ctrl+w v: vertical split
+- ctrl+o: close every panes except the current one
+- ctrl+w =: equal size panes
+- ctrl+w r: rotate panes (switch the positions of the panes)
 
 __Sourcing files__
 
 `:so nameOfTheFile` in vim to source a .vimrc or something.vim file
 or `:so %` to source the current file 
+
+__Autocomplete__
+- Ctrl+n (next) and ctrl+p (prev): to bring up vim built-in autocomplete
+- __Highly recommend__: install `coc` ([https://www.youtube.com/watch?v=OXEVhnY621M&t=3s&ab_channel=ChrisAtMachine](https://www.youtube.com/watch?v=OXEVhnY621M&t=3s&ab_channel=ChrisAtMachine))
 
 ### Macros
 __Macros__: combinations of keys
@@ -343,16 +365,53 @@ Store macros to register
 3. q finish recording macro
 4. @a repeat last op from register
 
+### Terminal
+https://www.youtube.com/watch?v=8m5t9VDAqDE&t=122s&ab_channel=ThePrimeagen
+Neovim (and vim) has terminal. Use `ctrl+\ ctrl+n` to leave the terminal (insert) mode.
+Do `:terminal` to open in new tab or `:split | terminal` or `:vsplit | terminal` to open in new split. 
+__Trick__: (Primageon) when there's an error message coming from file abc.xyz we can put the cursor under the file and hit `ctrl+w f` to go to that file
 
 ### Packages
 
-Use Vundle [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
+- Use Vundle [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) to install packages. Usually, we put `Plugin "something"` in .vimrc within the Vundle bracket, then do
 `:so %` and `:PluginInstall`. Then the package is ready to use! We can even edit the package in `~/.vim/bundle/SpecificPackagename`.
+- Use fzf for fuzzy finder. Good resource: [https://www.youtube.com/watch?v=on1AzaZzQ7k&ab_channel=ChrisAtMachine](https://www.youtube.com/watch?v=on1AzaZzQ7k&ab_channel=ChrisAtMachine)
+    - We can even use fzf in terminal. See .zshrc files for more. Basically download key-bindings.zsh and completion.zsh files from https://github.com/junegunn/fzf/blob/master/shell/ and source them in .zshrc as
+
+```
+# # for fzf fuzzy finder. Download from https://github.com/junegunn/fzf/blob/master/shell/
+ source ~/Downloads/fzf_zsh/completion.zsh
+ source ~/Downloads/fzf_zsh/key-bindings.zsh
+# # ctrl+r : search through command history
+# # ctrl+t : search through files (NOT folder)
+# # normally, alt+c search through folders. But iterm2 and Mac
+# # are usually weird with alt/option key. https://github.com/junegunn/fzf/issues/164
+# # A solution is to do `bindkey "ç" fzf-cd-widget` where "ç" is
+# # the character from hitting alt+c. 
+# # Issues: Mac search folder can't access `Documents` folder. https://github.com/junegunn/fzf/issues/2073
+bindkey "ç" fzf-cd-widget
+#
+# # https://mike.place/2017/fzf-fd/#:~:text=fzf%20is%20a%20command%20line,find%20files%20and%20change%20directories.
+# # Use fd with fzf. And now, we have access to `Documents` folder!
+# # --hiden to search hidden files
+# Also, see https://github.com/sharkdp/fd#using-fd-with-fzf
+export FZF_DEFAULT_COMMAND="fd --type file --hidden --follow --color=always --exclude .git"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# https://github.com/sharkdp/fd. Use "-H" to search hidden 
+# folders
+export FZF_ALT_C_COMMAND="fd -H -t d"
+```
 
 
-__Tcomment_vim__: In visual mode, type `gc` to comment/uncomment code block. But most other editors
+- __Tcomment_vim__: In visual mode, type `gc` to comment/uncomment code block. But most other editors
 use `cmd + /` to comment code so I map `cmd + /` to `gc` using the iterm2 trick. (see above in iterm2 remap
 trick). Note that Vim also doesn't support the cmd key. 
+- Vim_ariline: for awesome status bar at the end.
+
+![](imgs/vim_airline.png)
+![](imgs/vim_fugitive.png)
+![](imgs/coc_explorer_and_terminal.png)
 
 ### Install color theme
 Download a something.vim from github. Then put that into ~/.vim/colors. Then, we can use ":colorscheme something" to set the color.
@@ -365,7 +424,17 @@ The goat!!
 [https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen](https://www.youtube.com/watch?v=nnhqVDIx-go&ab_channel=ThePrimeagen): More navigation
 
 ### Configure 
-
 Configure the file `.vimrc` in the root directory
 
+### Neovim
+Neovim also supports github copilot! [https://github.com/github/copilot.vim](https://github.com/github/copilot.vim). 
+It's also easy to sync vim and neovim configs [https://vi.stackexchange.com/questions/12794/how-to-share-config-between-vim-and-neovim](https://vi.stackexchange.com/questions/12794/how-to-share-config-between-vim-and-neovim). Only need to put the following
+
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
+source ~/.vimrc
+```
+
+in `~/.config/nvim/init.vim` file.
 
