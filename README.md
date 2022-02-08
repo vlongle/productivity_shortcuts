@@ -314,9 +314,12 @@ Shift + [, Shift + ]
     - x: delete word
     - Shift + i: insert beginning of line
     - Shift + a: insert end of line
+    - f + character: jump on that character within this line
+    - t + character: jump to before character within this line
+        - as usual in vim, `Shift + something` is going backward so we can do stuff
+        like `shift + f`, `shift + t`, `shift + tab` (in suggestion) and `shift + s` (in the sneak
+        pluggin)
 
-- f + character: jump on that character within this line
-- t + character: jump to before character within this line
     - Use `;` to repeat the t and f jumps. `,` to go backward. [https://stackoverflow.com/questions/10340562/vim-repeat-find-next-character-x](https://stackoverflow.com/questions/10340562/vim-repeat-find-next-character-x)
 - e: get to the end of a word
 - %: jump to matching brackets like (, ) or {, }
@@ -407,7 +410,7 @@ export FZF_ALT_C_COMMAND="fd -H -t d"
 - __Tcomment_vim__: In visual mode, type `gc` to comment/uncomment code block. But most other editors
 use `cmd + /` to comment code so I map `cmd + /` to `gc` using the iterm2 trick. (see above in iterm2 remap
 trick). Note that Vim also doesn't support the cmd key. 
-- Vim_ariline: for awesome status bar at the end.
+- Vim_airline: for awesome status bar at the end.
 
 ![](imgs/vim_airline.png)
 ![](imgs/vim_fugitive.png)
