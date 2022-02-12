@@ -56,7 +56,8 @@ app. The code is the last part of unicode. For example, `g` is 0x67 and `c` is 0
 - alias weather='curl http://wttr.in/'.
 - `w3m google.com` to surf google from the terminal.
 - cmatrix [https://github.com/abishekvashok/cmatrix](https://github.com/abishekvashok/cmatrix).
-
+- `fish`: a cool terminal with stuff like auto-suggestion, syntax highlighting, and completion. We can get the same thing
+in zsh by installing a bunch of zhs plugins (https://www.youtube.com/watch?v=SVh4osULjP4&ab_channel=DanielLaera).
 ## Chrome
 
 ### Shortcuts
@@ -105,13 +106,14 @@ shortcuts.
 `Shift + Cmd + G`: to be able to navigate to hidden folders
 - `Cmd + Tab` switch between apps.
 
-### Spectacle
+### Cool apps
+#### Spectacle
 
 Window manager. 
 It shows all the shortcuts in the app. 
 Move left/right, move top left/right, move bottom left/right, move center, move full-screen
 
-### Mac Spaces & Mission Control
+#### Mac Spaces & Mission Control
 
 ![](imgs/mac_spaces_mission_control.png)
 
@@ -119,6 +121,32 @@ Move left/right, move top left/right, move bottom left/right, move center, move 
 - Ctr + <-/->: Moving between spaces
 - Ctr + Down: see all instances of this app (e.g. multiple windows of Chrome)
 
+#### AppCleaner
+- To delete apps resolutely from Mac 
+
+List of cool apps:
+[https://www.youtube.com/watch?v=RNqDkF17ogY&t=411s&ab_channel=devaslife](https://www.youtube.com/watch?v=RNqDkF17ogY&t=411s&ab_channel=devaslife)
+
+#### Alfred
+Replacement for Spotlight search.
+
+#### Raycast
+Free alternative for Alfred
+
+#### CursorEffect 2
+Make the mouse look pretty
+
+#### Keycastr
+Capture the typed keys
+
+#### Istat Menu
+Display stuff like weather, cpu, memory usages in the top bar.
+
+#### InsomniaX
+Disable lid sleep. Used to be good for stuff like training ML models over night on Jupyter notebook, and we want to disable Mac autosleep.
+
+#### Aerial companion
+Beautiful desktop and screensaver based on Apple 4K video TV.
 
 ## VSCode
 
@@ -380,7 +408,8 @@ __Trick__: (Primageon) when there's an error message coming from file abc.xyz we
 `:so %` and `:PluginInstall`. Then the package is ready to use! We can even edit the package in `~/.vim/bundle/SpecificPackagename`.
 - Use fzf for fuzzy finder. Good resource: [https://www.youtube.com/watch?v=on1AzaZzQ7k&ab_channel=ChrisAtMachine](https://www.youtube.com/watch?v=on1AzaZzQ7k&ab_channel=ChrisAtMachine)
     - We can even use fzf in terminal. See .zshrc files for more. Basically download key-bindings.zsh and completion.zsh files from https://github.com/junegunn/fzf/blob/master/shell/ and source them in .zshrc as
-
+    - https://github.com/marlonrichert/zsh-autocomplete, https://github.com/zsh-users/zsh-syntax-highlighting, zsh auto suggestion 
+    - To set custom key binding, go to each plugin folder (e.g. .zsh/zsh-autocomplete) and modify `vi .zshrc`.
 ```
 # # for fzf fuzzy finder. Download from https://github.com/junegunn/fzf/blob/master/shell/
  source ~/Downloads/fzf_zsh/completion.zsh
