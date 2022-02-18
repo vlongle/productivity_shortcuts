@@ -148,6 +148,12 @@ Disable lid sleep. Used to be good for stuff like training ML models over night 
 #### Aerial companion
 Beautiful desktop and screensaver based on Apple 4K video TV.
 
+#### Dozer
+Arrange the menu bar/hide application. Free alternative to Bartender.
+
+#### Weather live widget (appstore)
+Slick app to display weather / current temperature on the menu bar.
+
 ## VSCode
 
 ### Shortcuts
@@ -352,7 +358,9 @@ Shift + [, Shift + ]
 - e: get to the end of a word
 - %: jump to matching brackets like (, ) or {, }
 - __tip__: deleting args of function?
-    - Use d t then ).
+    - when already at the beginning of the bracket. Use d t then ) (or whatever bracket symbol you want).
+    - At the beginning of the line, hit "shift + %" to jump to the bracket. Then `ca]` to delete everything inside the bracket including the brackets themselves. Use `ci]` to delete only the things inside and keep the bracket. `c` is for delete and enters insert mode. Replace `]` by whatever bracket type you have (e.g. `)`, `}`)
+
 
 - Ctrl + a: increment a number under cursor
 - Ctrl + x: decrement a number under cursor
